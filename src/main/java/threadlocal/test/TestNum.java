@@ -2,7 +2,7 @@ package threadlocal.test;
 
 /**
  * @Package Name : ${PACKAG_NAME}
- * @Author : dongfucai@meituan.com
+ * @Author : 1766318593@qq.com
  * @Creation Date : 2018年05月11日上午11:05
  * @Function : todo
  */

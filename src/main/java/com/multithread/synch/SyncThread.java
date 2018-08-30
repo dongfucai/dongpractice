@@ -2,7 +2,7 @@ package com.multithread.synch;
 
 /**
  * @Package Name : ${PACKAG_NAME}
- * @Author : dongfucai@meituan.com
+ * @Author : 1766318593@qq.com
  * @Creation Date : 2018年05月09日下午5:15
  * @Function :  synchronizd 一种同步锁
  *    1 修饰代码块    { }     作用的对象是调用这个代码块的对象；

@@ -2,7 +2,7 @@ package com.tasktemplate;
 
 /**
  * @Package Name : ${PACKAG_NAME}
- * @Author : dongfucai@meituan.com
+ * @Author : 1766318593@qq.com
  * @Creation Date : 2018年08月15日下午3:21
  * @Function : todo
  */
@@ -18,7 +18,7 @@ import java.util.concurrent.Callable;
 
 /**
  * @Package Name : ${PACKAG_NAME}
- * @Author : dongfucai@meituan.com
+ * @Author : 1766318593@qq.com
  * @Creation Date : 2018年08月14日下午3:38
  * @Function : todo
  */
