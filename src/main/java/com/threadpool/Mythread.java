@@ -84,29 +84,37 @@ public class Mythread {
         executor.execute(myRunnable);
         executor.execute(myRunnable);
 
-
-        System.out.println("---先开三个---");
-        System.out.println("核心线程数" + executor.getCorePoolSize());
-        System.out.println("线程池数" + executor.getPoolSize());
-        System.out.println("队列任务数" + executor.getQueue().size());
-        executor.execute(myRunnable);
-        executor.execute(myRunnable);
-        executor.execute(myRunnable);
-        System.out.println("---再开三个---");
-        System.out.println("核心线程数" + executor.getCorePoolSize());
-        System.out.println("线程池数" + executor.getPoolSize());
-        System.out.println("队列任务数" + executor.getQueue().size());
-
         try {
-            Thread.sleep(8000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        System.out.println("----8秒之后----");
-        System.out.println("核心线程数" + executor.getCorePoolSize());
-        System.out.println("线程池数" + executor.getPoolSize());
-        System.out.println("队列任务数" + executor.getQueue().size());
+        executor.execute(myRunnable);
+        executor.execute(myRunnable);
+
+//        System.out.println("---先开三个---");
+//        System.out.println("核心线程数" + executor.getCorePoolSize());
+//        System.out.println("线程池数" + executor.getPoolSize());
+//        System.out.println("队列任务数" + executor.getQueue().size());
+//        executor.execute(myRunnable);
+//        executor.execute(myRunnable);
+//        executor.execute(myRunnable);
+//        System.out.println("---再开三个---");
+//        System.out.println("核心线程数" + executor.getCorePoolSize());
+//        System.out.println("线程池数" + executor.getPoolSize());
+//        System.out.println("队列任务数" + executor.getQueue().size());
+//
+//        try {
+//            Thread.sleep(8000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//
+//        System.out.println("----8秒之后----");
+//        System.out.println("核心线程数" + executor.getCorePoolSize());
+//        System.out.println("线程池数" + executor.getPoolSize());
+//        System.out.println("队列任务数" + executor.getQueue().size());
 
     }
 

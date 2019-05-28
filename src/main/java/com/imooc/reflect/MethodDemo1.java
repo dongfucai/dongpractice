@@ -1,6 +1,8 @@
 package com.imooc.reflect;
 
 
+import sun.misc.Unsafe;
+
 import java.lang.reflect.Method;
 
 public class MethodDemo1 {
@@ -49,6 +51,7 @@ public class MethodDemo1 {
 class A{
     public void print(int a,int b){
         System.out.println(a+b);
+
     }
 
     public void print(String a, String b){

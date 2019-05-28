@@ -30,6 +30,7 @@ public class ClassUtil {
                        String      String.class
              */
             Class returnType= ms[i].getReturnType();
+            System.out.println(ms[i].getGenericReturnType() + "  dongfucai");
             System.out.print(returnType.getName()+" ");
             // 获得方法名称
             System.out.print(ms[i].getName()+"(");

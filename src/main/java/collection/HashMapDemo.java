@@ -13,10 +13,29 @@ import java.util.stream.Collectors;
 public class HashMapDemo {
 
     public static void main(String[] args) {
+
+
+        int aaaa = 44;
+        Map map2 = new HashMap(5);
+        map2.put("232", "233333");
+        map2.put(null, "233333332");
+
+        System.out.println(map2.get(null));
+
+
+        int n =4;
+        int hash = 3453;
+        int aaa ;
+        aaa = (n - 1) & hash;
+        System.out.println("aaaa=" + aaa);
+
         Map<String,String> map=new HashMap<String,String>();
         map.put("01","zhangsan");
         map.put("02","list");
         map.put("03","wangyu");
+        map.put(null, "2443");
+
+
 
         Collection<String> collection=map.values();  // 返回 values 的集合
 

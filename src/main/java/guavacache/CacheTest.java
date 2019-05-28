@@ -56,8 +56,16 @@ public class CacheTest {
                 .maximumSize(2)
                 // 设置要统计缓存的命中率
                 .recordStats()
-        // 设置缓存的移除通知
+                /**
+                 * expireAfterAccess是指定项在一定时间内没有读写，会移除该key，下次取的时候从loading中取
+                 * refreshAfterWrite是在指定时间内没有被创建/覆盖，则指定时间过后，再次访问时，会去刷新该缓存，在新值没有到来之前，始终返回旧值
+                 * 跟expire的区别是，指定时间过后，expire是remove该key，下次访问是同步去获取返回新值；而refresh则是指定时间后，
+                 * 不会remove该key，下次访问会触发刷新，新值没有回来时返回旧值
+                 */
+                .refreshAfterWrite(1, TimeUnit.MINUTES)
+                // 设置缓存的移除通知
                 .removalListener(new RemovalListener<Object, Object>() {
+                    @Override
                     public void onRemoval(RemovalNotification<Object, Object> notification) {
                         System.out.println(
                                 notification.getKey() + " was removed, cause is " + notification.getCause());
@@ -80,10 +88,13 @@ public class CacheTest {
 //          Student student = studentLoadingCache.get(i);
 //          System.out.println(student);
 //          // 休眠1秒
-//          TimeUnit.SECONDS.sleep(1);
+//         TimeUnit.SECONDS.sleep(1);
 //         }
 
         Student student = studentLoadingCache.get(1);
+
+        System.out.println(student);
+        System.out.println(student);
         System.out.println(student);
         student = studentLoadingCache.get(1);
         System.out.println(student);

@@ -9,7 +9,9 @@ import java.util.concurrent.locks.ReentrantLock;
  * @Function : ReentrantLock 可中断
  */
 
-
+/**
+ * 可中断
+ */
 public class LockInterrupt extends Thread{
 
     public static ReentrantLock lock1 = new ReentrantLock();

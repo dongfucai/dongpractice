@@ -34,4 +34,25 @@ public class ExceptionTest {
 
     }
 
+    public static boolean catchMethod() {
+                System.out.print("call catchMethod and return  --->>  ");
+                return false;
+    }
+     // finally后续处理工作
+             public static void finallyMethod() {
+                System.out.println();
+                System.out.print("call finallyMethod and do something  --->>  ");
+           }
+
+     public static boolean catchTest() {
+                try {
+                        int i = 10 / 0;   // 抛出 Exception，后续处理被拒绝
+                        System.out.println("i vaule is : " + i);
+                        return true;    // Exception 已经抛出，没有获得被执行的机会
+                    } catch (Exception e) {
+                        System.out.println(" -- Exception --");
+                        return catchMethod();    // Exception 抛出，获得了调用方法并返回方法值的机会
+                    }
+    }
+
 }

@@ -52,32 +52,32 @@ public class ReferenceTest {
         }
     }
 
-class VeryBig {
-    public String id;
-    // 占用空间,让线程进行回收
-    byte[] b = new byte[2 * 1024];
+    class VeryBig {
+        public String id;
+        // 占用空间,让线程进行回收
+        byte[] b = new byte[2 * 1024];
 
-    public VeryBig(String id) {
+        public VeryBig(String id) {
         this.id = id;
-    }
+        }
 
-    protected void finalize() {
+        @Override
+        protected void finalize() {
         System.out.println("Finalizing VeryBig " + id);
+        }
     }
-}
 
-class VeryBigWeakReference extends WeakReference<VeryBig> {
-    public String id;
+    class VeryBigWeakReference extends WeakReference<VeryBig> {
+        public String id;
 
-    public VeryBigWeakReference(VeryBig big, ReferenceQueue<VeryBig> rq) {
+        public VeryBigWeakReference(VeryBig big, ReferenceQueue<VeryBig> rq) {
         super(big, rq);
         this.id = big.id;
+        }
+
+        @Override
+        protected void finalize() {
+            System.out.println("Finalizing VeryBigWeakReference " + id);
+        }
+
     }
-
-    protected void finalize() {
-        System.out.println("Finalizing VeryBigWeakReference " + id);
-    }
-
-
-
-}
