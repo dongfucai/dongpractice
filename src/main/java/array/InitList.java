@@ -18,6 +18,7 @@ public class InitList {
     public static void main(String[] args) {
 
 
+
         /**
          * jdk 2
          */

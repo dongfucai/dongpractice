@@ -44,6 +44,15 @@ public class LazySingleton {
         System.out.println(curr1.getTime().getTime());
         System.out.println(curr2.getTime().getTime());
 
+
+        Calendar calendar = Calendar.getInstance();
+        int nowHow = calendar.get(Calendar.HOUR_OF_DAY);
+        int nowMM = calendar.get(Calendar.MINUTE);
+        System.out.println(nowHow);
+        System.out.println(nowMM);
+
+
+        //System.out.println(Integer.valueOf(null));
     }
 
 }

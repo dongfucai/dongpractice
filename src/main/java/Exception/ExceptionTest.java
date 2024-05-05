@@ -15,7 +15,7 @@ public class ExceptionTest {
 
     public static void function() {
 
-        String s = "abc";
+        String s = "455";
         System.out.println(Double.parseDouble(s));
     }
 

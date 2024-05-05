@@ -27,6 +27,7 @@ public class RandomTest {
 
         Random random1 = new Random(100);
         System.out.println(random1.nextInt());
+        System.out.println(random1.nextInt());
         System.out.println(random1.nextFloat());
         System.out.println(random1.nextBoolean());
 
